@@ -20,15 +20,15 @@ function AnimateText({ title, subTitle, onComplete }) {
         style={styles}
       >
         <div className="flex flex-col justify-center items-center h-full text-[#fafafa] uppercase">
-          <h1 className="mb-16 text-2xl uppercase font-semibold leading-6 tracking-widest">
+          <h1 className="mb-[3vw] text-[2.4vw] uppercase font-semibold leading-6 tracking-widest">
             {title}
           </h1>
           <div className="relative text-center">
-            <h2 className="text-5xl font-extrabold text-[#2d2d2d] text-shadow-custom">
+            <h2 className="text-[3.8vw] font-extrabold text-[#2d2d2d] text-shadow-custom">
               {subTitle}
             </h2>
             <div className="absolute top-0 left-0 w-full overflow-hidden whitespace-nowrap animate-enlight">
-              <h2 className="text-5xl font-extrabold text-[#ffcc00] text-shadow-lg shadow-[#ffcc00] ">
+              <h2 className="text-[3.8vw] font-extrabold text-[#ffcc00] text-shadow-lg shadow-[#ffcc00] ">
                 {subTitle}
               </h2>
             </div>

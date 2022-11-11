@@ -17,7 +17,7 @@ export default function IconButton({
     >
       <div className="flex items-center space-x-2 ">
         <div>{title}</div>
-        <i className={`text-2xl icofont ${icon}`}></i>
+        <i className={`text-xl icofont ${icon}`}></i>
       </div>
     </button>
   );

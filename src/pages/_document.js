@@ -16,7 +16,7 @@ export default function MyDocument() {
         />
         <link rel="shortcut icon" href="favicon.svg" />
       </Head>
-      <body>
+      <body className="bg-[#f3f2ef]">
         <Main />
         <NextScript />
       </body>

@@ -29,7 +29,7 @@ const meteors = [
 
 export default function AnimatedBackground() {
   return (
-    <div className="bg-[#f3f2ef] fixed top-0 left-0 w-full h-full -z-10  px-1">
+    <div className="fixed top-0 left-0 w-full h-full -z-10  px-1">
       <div className="flex justify-between">
         {stars.map(({ id, icon, animate }) => (
           <div key={id} className={animate}>

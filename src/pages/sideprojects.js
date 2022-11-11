@@ -50,7 +50,7 @@ async function fetchGHProjects(repos) {
 
 function GhostCard() {
   return (
-    <Card className="w-60 h-36 p-4">
+    <Card className="h-48 px-4 py-2">
       <div className="flex flex-col space-y-6 py-1 animate-pulse">
         <div className="grid grid-cols-3 gap-4">
           <div className="h-2 bg-gray-300 rounded col-span-2"></div>
@@ -69,7 +69,7 @@ function GhostCard() {
 
 function ProjectCard({ title, description, language, stars, href }) {
   return (
-    <Card className="w-60" href={href}>
+    <Card className="h-48" href={href}>
       <div className="flex justify-between rounded-t-md m-0 px-4 py-2">
         <h4 className="font-medium">{title}</h4>
         {stars > 0 ? (
@@ -105,7 +105,7 @@ export default function Portfolio() {
     <Pane className="py-10">
       <section className="pb-4 px-10">
         <Title>Side projects</Title>
-        <div className="grid grid-cols-3 gap-6 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
           {loading
             ? [1, 2, 3, 4, 5, 6, 7].map((key) => <GhostCard key={key} />)
             : projects.map(
@@ -130,7 +130,7 @@ export default function Portfolio() {
       </section>
       <section className="pb-4 px-10">
         <Title>Open source contributions</Title>
-        <div className="grid grid-cols-3 gap-6 py-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
           {profile.opensourceContributions.map(
             ({ title, description, url }) => (
               <ProjectCard

@@ -15,18 +15,14 @@ const valueColors = [
 
 function CardValue({ title, logo, index }) {
   return (
-    <div className="flex flex-col items-center space-y-2 my-8 animate-zoom-out">
-      <Card
-        className={`flex justify-center items-center py-8 rounded-full w-28 h-28 border-none ${
-          valueColors[index % valueColors.length]
-        }`}
-      >
-        <i
-          className={`icofont ${logo} text-5xl text-transparent bg-clip-text bg-gradient-to-br from-gray-600 to-gray-900`}
-        ></i>
-      </Card>
-      <h4 className="text-sm font-medium">{title}</h4>
-    </div>
+    <Card
+      className={`flex flex-col justify-center items-center space-y-2 rounded-full w-32 h-32 max-lg:w-28 max-lg:h-28 border-none text-gray-700 ${
+        valueColors[index % valueColors.length]
+      } animate-zoom-out`}
+    >
+      <i className={`icofont ${logo} text-5xl `}></i>
+      <h4 className="text-sm text-center font-medium">{title}</h4>
+    </Card>
   );
 }
 
@@ -88,15 +84,17 @@ export default function Home() {
       <section className="py-4 px-10">
         <Title>My values</Title>
 
-        <div className="grid grid-cols-4 py-8">
+        <div className="grid grid-cols-4 max-lg:grid-cols-2 gap-8 mt-8">
           {profile.values.map(({ name, logo }, index) => (
-            <CardValue key={name} title={name} logo={logo} index={index} />
+            <div key={name} className="flex justify-center items-center">
+              <CardValue title={name} logo={logo} index={index} />
+            </div>
           ))}
         </div>
       </section>
       <section className="py-4 px-10">
-        <div className="flex space-x-20">
-          <div className="w-1/2">
+        <div className="flex space-x-20 max-md:flex-col max-md:space-x-0">
+          <div className="w-full">
             <Title>Code skills</Title>
             <div className="mt-8">
               {profile.codeSkills.map(({ technology, level }) => {
@@ -110,7 +108,7 @@ export default function Home() {
               })}
             </div>
           </div>
-          <div className="w-1/2">
+          <div className="w-full max-md:mt-8">
             <Title>Framework/Library skills</Title>
             <div className="mt-8">
               {profile.frameworkLibrarySkills.map(({ technology, level }) => {

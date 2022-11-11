@@ -40,7 +40,7 @@ export default function Resume() {
     <Pane className="py-10">
       <section className="px-10 pb-4">
         <Title>They trusted me</Title>
-        <div className="flex justify-evenly items-center">
+        <div className="grid grid-cols-5 max-lg:grid-cols-3 gap-4">
           {companyLogo.map(({ name, url, size }) => (
             <Card
               key={name}

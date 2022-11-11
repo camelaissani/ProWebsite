@@ -1,11 +1,7 @@
-import { useCallback, useContext } from 'react';
-
-import axios from 'axios';
-import fileDownload from 'js-file-download';
-import IconButton from './IconButton';
 import Link from 'next/link';
 import Pane from './Pane';
 import ProfileContext from './ProfileContext';
+import { useContext } from 'react';
 import { useRouter } from 'next/router';
 
 function MenuItem({ href, home = false, active = false, children }) {
@@ -40,19 +36,6 @@ export default function AppBar() {
   const router = useRouter();
   const profile = useContext(ProfileContext);
 
-  const onClick = useCallback(
-    async (e) => {
-      const res = await axios.get(profile.cvUrl, {
-        responseType: 'blob',
-      });
-
-      fileDownload(res.data, `${profile.name}.pdf`);
-
-      e.preventDefault();
-    },
-    [profile.cvUrl, profile.name]
-  );
-
   return (
     <Pane>
       <div className="flex flex-nowrap justify-between">
@@ -86,11 +69,6 @@ export default function AppBar() {
           <MenuIconItem href={profile.twitterUrl}>
             <i className="icofont icofont-twitter"></i>
           </MenuIconItem>
-          <IconButton
-            title="Download Cv"
-            icon="icofont-download text-base"
-            onClick={onClick}
-          />
         </div>
       </div>
     </Pane>
