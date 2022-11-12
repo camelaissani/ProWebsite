@@ -9,6 +9,7 @@ const nextConfig = {
     PROFILE_URL: process.env.PROFILE_URL,
     WEB3_FORMS_ACCESS_KEY: process.env.WEB3_FORMS_ACCESS_KEY,
   },
+  basePath: process.env.BASE_PATH || '',
   images: {
     remotePatterns: [
       {
