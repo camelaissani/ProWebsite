@@ -7,7 +7,7 @@ function AnimateText({ title, subTitle, onComplete }) {
   const styles = useSpring({
     loop: false,
     opacity: 0,
-    delay: 3500,
+    delay: 4000,
     from: { opacity: 1 },
     config: { duration: 1000 },
     onRest: onComplete,

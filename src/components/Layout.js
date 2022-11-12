@@ -22,7 +22,7 @@ function shouldShowWelcome() {
 
   if (prevWelcomeTimestamp) {
     const delta = curWelcomeTimestamp - prevWelcomeTimestamp;
-    if (delta <= 1 * 60 * 1000) {
+    if (delta <= 0.2 * 60 * 1000) {
       localStorage.setItem('welcomeTimestamp', curWelcomeTimestamp);
       return false;
     }
