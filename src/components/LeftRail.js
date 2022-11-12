@@ -47,7 +47,7 @@ export default function LeftRail() {
   );
 
   return (
-    <Pane className="px-4 max-md:px-10 pb-6">
+    <Pane className="px-4 max-md:px-4 pb-6">
       <h1 className="text-lg font-bold uppercase mt-4">{profile.name}</h1>
       <div className="text-xs text-gray-500">{profile.title}</div>
       <div className="mt-2 clip-img">

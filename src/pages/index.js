@@ -16,12 +16,14 @@ const valueColors = [
 function CardValue({ title, logo, index }) {
   return (
     <Card
-      className={`flex flex-col justify-center items-center space-y-2 rounded-full w-32 h-32 max-lg:w-28 max-lg:h-28 border-none text-gray-700 ${
+      className={`flex flex-col justify-center items-center space-y-2 rounded-full w-32 h-32 max-lg:w-24 max-lg:h-24 border-none text-gray-700 ${
         valueColors[index % valueColors.length]
       } animate-zoom-out`}
     >
-      <i className={`icofont ${logo} text-5xl `}></i>
-      <h4 className="text-sm text-center font-medium">{title}</h4>
+      <i className={`icofont ${logo} text-5xl max-lg:text-4xl`}></i>
+      <h4 className="text-sm max-lg:text-xs text-center font-medium">
+        {title}
+      </h4>
     </Card>
   );
 }
@@ -77,14 +79,14 @@ export default function Home() {
 
   return (
     <Pane className="py-10">
-      <section className="pb-4 px-10">
+      <section className="pb-4 px-10 max-md:px-4">
         <Title>About me</Title>
         <p className="mt-8">{profile.intro}</p>
       </section>
-      <section className="py-4 px-10">
+      <section className="py-4 px-10 max-md:px-4">
         <Title>My values</Title>
 
-        <div className="grid grid-cols-4 max-lg:grid-cols-2 gap-8 mt-8">
+        <div className="grid md:grid-cols-4 sm:grid-cols-1 lg:gap-8 max-md:gap-4 mt-8">
           {profile.values.map(({ name, logo }, index) => (
             <div key={name} className="flex justify-center items-center">
               <CardValue title={name} logo={logo} index={index} />
@@ -92,7 +94,7 @@ export default function Home() {
           ))}
         </div>
       </section>
-      <section className="py-4 px-10">
+      <section className="py-4 px-10 max-md:px-4">
         <div className="flex space-x-20 max-md:flex-col max-md:space-x-0">
           <div className="w-full">
             <Title>Code skills</Title>

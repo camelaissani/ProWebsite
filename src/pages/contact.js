@@ -150,7 +150,7 @@ function ContactForm() {
 export default function Contact() {
   return (
     <Pane className="py-10">
-      <section className="pb-4 px-10">
+      <section className="pb-4 px-10 max-md:px-4">
         <Title>Contact</Title>
         <ContactForm />
       </section>

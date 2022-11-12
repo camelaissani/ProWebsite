@@ -103,7 +103,7 @@ export default function Portfolio() {
 
   return (
     <Pane className="py-10">
-      <section className="pb-4 px-10">
+      <section className="pb-4 px-10 max-md:px-4">
         <Title>Side projects</Title>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
           {loading
@@ -128,7 +128,7 @@ export default function Portfolio() {
               )}
         </div>
       </section>
-      <section className="pb-4 px-10">
+      <section className="pb-4 px-10 max-md:px-4">
         <Title>Open source contributions</Title>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-8">
           {profile.opensourceContributions.map(

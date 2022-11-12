@@ -38,27 +38,28 @@ export default function Resume() {
 
   return (
     <Pane className="py-10">
-      <section className="px-10 pb-4">
+      <section className="px-10 max-md:px-4 pb-4">
         <Title>They trusted me</Title>
-        <div className="grid grid-cols-5 max-lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-5 max-md:grid-cols-3 gap-4 pt-8 pb-4">
           {companyLogo.map(({ name, url, size }) => (
             <Card
               key={name}
-              className="flex items-center justify-center h-28 w-32 border-none"
+              className="flex items-center justify-center border-none"
             >
-              <Image
-                className="relative"
-                src={url}
-                alt={`${name} logo`}
-                height={size}
-                width={size}
-              />
+              <div className="flex items-center justify-center h-16">
+                <Image
+                  src={url}
+                  alt={`${name} logo`}
+                  height={size}
+                  width={size}
+                />
+              </div>
             </Card>
           ))}
         </div>
       </section>
 
-      <section className="pb-4 px-10">
+      <section className="pb-4 px-10 max-md:px-4">
         <Stepper
           className="ml-4 py-4"
           icon="icofont-briefcase-1"
@@ -68,7 +69,7 @@ export default function Resume() {
         />
       </section>
 
-      <section className="pb-4 px-10">
+      <section className="pb-4 px-10 max-md:px-4">
         <Stepper
           className="ml-4 py-4"
           icon="icofont-graduate"
