@@ -1,5 +1,6 @@
 import { Head, Html, Main, NextScript } from 'next/document';
 
+import { basePath } from '../../next.config';
 import React from 'react';
 
 export default function MyDocument() {
@@ -14,7 +15,7 @@ export default function MyDocument() {
           href="https://unpkg.com/@icon/icofont/icofont.css"
           rel="stylesheet"
         />
-        <link rel="shortcut icon" href="favicon.svg" />
+        <link rel="icon" href={`${basePath}/favicon.svg`} />
       </Head>
       <body className="bg-[#f3f2ef]">
         <Main />
