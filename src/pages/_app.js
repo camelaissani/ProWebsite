@@ -13,7 +13,7 @@ function MyApp({ Component, pageProps }) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
-      {Component.name === 'Custom404' ? (
+      {Component.pageName === '404' ? (
         <Component {...pageProps} />
       ) : (
         <ErrorBoundary>

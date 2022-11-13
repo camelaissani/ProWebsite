@@ -15,3 +15,5 @@ export default function Custom404() {
     </div>
   );
 }
+
+Custom404.pageName = '404';
