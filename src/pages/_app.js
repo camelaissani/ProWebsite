@@ -13,11 +13,15 @@ function MyApp({ Component, pageProps }) {
           content="minimum-scale=1, initial-scale=1, width=device-width"
         />
       </Head>
-      <ErrorBoundary>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ErrorBoundary>
+      {Component.name === 'Custom404' ? (
+        <Component {...pageProps} />
+      ) : (
+        <ErrorBoundary>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </ErrorBoundary>
+      )}
     </>
   );
 }

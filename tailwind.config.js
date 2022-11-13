@@ -23,47 +23,47 @@ module.exports = {
         lg: '0 2px 12px var(--tw-shadow-color)',
       },
       animation: {
-        'bubble-up-10': 'bubble-up-20 15s linear infinite',
-        'bubble-up-20': 'bubble-up-20 20s linear infinite',
-        'bubble-up-30': 'bubble-up-30 30s linear infinite',
-        'bubble-up-40': 'bubble-up-40 40s linear infinite',
-        'bubble-up-50': 'bubble-up-50 50s linear infinite',
-        'meteor-10': 'meteor-10 15s linear infinite',
-        'meteor-20': 'meteor-20 20s linear infinite',
-        'meteor-30': 'meteor-30 30s linear infinite',
-        'meteor-40': 'meteor-40 40s linear infinite',
-        'meteor-50': 'meteor-50 50s linear infinite',
-        'meteor-60': 'meteor-60 60s linear infinite',
+        'bubble-up-10': 'bubble-up-20 40s linear infinite',
+        'bubble-up-20': 'bubble-up-20 50s linear infinite',
+        'bubble-up-30': 'bubble-up-30 70s linear infinite',
+        'bubble-up-40': 'bubble-up-40 90s linear infinite',
+        'bubble-up-50': 'bubble-up-50 110s linear infinite',
+        'meteor-10': 'meteor-10 20s linear infinite',
+        'meteor-20': 'meteor-20 40s linear infinite',
+        'meteor-30': 'meteor-30 80s linear infinite',
+        'meteor-40': 'meteor-40 160s linear infinite',
+        'meteor-50': 'meteor-50 200s linear infinite',
+        'meteor-60': 'meteor-60 250s linear infinite',
         'zoom-out': 'zoom-out 0.7s ease-in-out',
         enlight: 'enlight 2.5s linear',
       },
       keyframes: {
         'bubble-up-10': {
-          '100%': { transform: 'translateY(-10vh) scale(2)', opacity: 0.5 },
           '0%': { transform: 'translateY(100vh) scale(2)', opacity: 1 },
+          '100%': { transform: 'translateY(-10vh) scale(2)', opacity: 0.5 },
         },
         'bubble-up-20': {
-          '100%': { transform: 'translateY(-10vh) scale(1.5)', opacity: 0.5 },
           '0%': { transform: 'translateY(100vh) scale(1.5)', opacity: 1 },
+          '100%': { transform: 'translateY(-10vh) scale(1.5)', opacity: 0.5 },
         },
         'bubble-up-30': {
-          '100%': { transform: 'translateY(-10vh)', opacity: 0.5 },
           '0%': { transform: 'translateY(100vh)', opacity: 1 },
+          '100%': { transform: 'translateY(-10vh)', opacity: 0.5 },
         },
         'bubble-up-40': {
-          '100%': { transform: 'translateY(-10vh) scale(0.8)', opacity: 0.5 },
           '0%': { transform: 'translateY(100vh) scale(0.8)', opacity: 1 },
+          '100%': { transform: 'translateY(-10vh) scale(0.8)', opacity: 0.5 },
         },
         'bubble-up-50': {
-          '100%': { transform: 'translateY(-10vh) scale(0.2)', opacity: 0.5 },
           '0%': { transform: 'translateY(100vh) scale(0.2)', opacity: 1 },
+          '100%': { transform: 'translateY(-10vh) scale(0.2)', opacity: 0.5 },
         },
         'meteor-10': {
           '0%': {
             transform: 'translateY(-10vh) translateX(20vw) scale(2)',
           },
           '100%': {
-            transform: 'translateY(100vh) translateX(-80vw) scale(2)',
+            transform: 'translateY(100vh) translateX(-160vw) scale(2)',
           },
         },
         'meteor-20': {
@@ -71,7 +71,7 @@ module.exports = {
             transform: 'translateY(-10vh) translateX(20vw) scale(1.5)',
           },
           '100%': {
-            transform: 'translateY(100vh) translateX(-80vw) scale(1.5)',
+            transform: 'translateY(100vh) translateX(-160vw) scale(1.5)',
           },
         },
         'meteor-30': {
@@ -79,7 +79,7 @@ module.exports = {
             transform: 'translateY(-10vh) translateX(20vw)',
           },
           '100%': {
-            transform: 'translateY(100vh) translateX(-80vw)',
+            transform: 'translateY(100vh) translateX(-160vw)',
           },
         },
         'meteor-40': {
@@ -87,7 +87,7 @@ module.exports = {
             transform: 'translateY(-10vh) translateX(20vw) scale(.8)',
           },
           '100%': {
-            transform: 'translateY(100vh) translateX(-80vw) scale(.8)',
+            transform: 'translateY(100vh) translateX(-160vw) scale(.8)',
           },
         },
         'meteor-50': {
@@ -95,7 +95,7 @@ module.exports = {
             transform: 'translateY(-10vh) translateX(20vw) scale(.5)',
           },
           '100%': {
-            transform: 'translateY(100vh) translateX(-80vw) scale(.5)',
+            transform: 'translateY(100vh) translateX(-160vw) scale(.5)',
           },
         },
         'meteor-60': {
@@ -103,7 +103,7 @@ module.exports = {
             transform: 'translateY(-10vh) translateX(20vw) scale(.2)',
           },
           '100%': {
-            transform: 'translateY(100vh) translateX(-80vw) scale(.2)',
+            transform: 'translateY(100vh) translateX(-160vw) scale(.2)',
           },
         },
         'zoom-out': {

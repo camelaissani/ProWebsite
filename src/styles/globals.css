@@ -25,6 +25,14 @@ a {
   box-sizing: border-box;
 }
 
+[class^='animate-bubble-up'] {
+  animation-delay: var(--star-animation-delay);
+}
+
+[class^='animate-meteor'] {
+  animation-delay: var(--meteor-animation-delay);
+}
+
 /* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

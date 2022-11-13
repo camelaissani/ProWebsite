@@ -29,22 +29,34 @@ const meteors = [
 
 export default function AnimatedBackground() {
   return (
-    <div className="fixed top-0 left-0 w-full h-full -z-10  px-1">
+    <div className="fixed top-0 left-0 w-full h-full -z-10 px-1">
       <div className="flex justify-between">
         {stars.map(({ id, icon, animate }) => (
-          <div key={id} className={animate}>
+          <div
+            key={id}
+            className={animate}
+            style={{
+              '--star-animation-delay': `-${Math.floor(Math.random() * 30)}s`,
+            }}
+          >
             <i
               className={`icofont ${icon} text-4xl text-gray-300 text-center`}
-            ></i>
+            />
           </div>
         ))}
       </div>
       <div className="flex justify-between">
         {meteors.map(({ id, icon, animate }) => (
-          <div key={id} className={animate}>
+          <div
+            key={id}
+            className={animate}
+            style={{
+              '--meteor-animation-delay': `-${Math.floor(Math.random() * 30)}s`,
+            }}
+          >
             <i
               className={`icofont ${icon} text-4xl text-gray-300 text-center`}
-            ></i>
+            />
           </div>
         ))}
       </div>
