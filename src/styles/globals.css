@@ -25,20 +25,23 @@ a {
   box-sizing: border-box;
 }
 
-[class^='animate-bubble-up'] {
-  animation-delay: var(--star-animation-delay);
+.star,
+.meteor {
+  position: absolute;
+  left: var(--bg-animation-item-pos-X);
+  top: var(--bg-animation-item-pos-Y);
+  font-size: var(--bg-animation-item-size);
+  opacity: var(--bg-animation-item-opacity);
 }
 
-[class^='animate-meteor'] {
-  animation-delay: var(--meteor-animation-delay);
+.animate-initial-star,
+.animate-initial-meteor {
+  visibility: hidden;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-} */
+.animate-initial-star,
+.animate-star,
+.animate-initial-meteor,
+.animate-meteor {
+  animation-duration: var(--bg-animation-duration);
+}

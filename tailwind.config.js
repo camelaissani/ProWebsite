@@ -23,87 +23,31 @@ module.exports = {
         lg: '0 2px 12px var(--tw-shadow-color)',
       },
       animation: {
-        'bubble-up-10': 'bubble-up-20 40s linear infinite',
-        'bubble-up-20': 'bubble-up-20 50s linear infinite',
-        'bubble-up-30': 'bubble-up-30 70s linear infinite',
-        'bubble-up-40': 'bubble-up-40 90s linear infinite',
-        'bubble-up-50': 'bubble-up-50 110s linear infinite',
-        'meteor-10': 'meteor-10 20s linear infinite',
-        'meteor-20': 'meteor-20 40s linear infinite',
-        'meteor-30': 'meteor-30 80s linear infinite',
-        'meteor-40': 'meteor-40 160s linear infinite',
-        'meteor-50': 'meteor-50 200s linear infinite',
-        'meteor-60': 'meteor-60 250s linear infinite',
-        'zoom-out': 'zoom-out 0.7s ease-in-out',
+        'initial-star': 'initial-star 1s linear',
+        star: 'star 1s linear infinite',
+        'initial-meteor': 'initial-meteor 1s linear',
+        meteor: 'meteor 1s linear infinite',
         enlight: 'enlight 2.5s linear',
       },
       keyframes: {
-        'bubble-up-10': {
-          '0%': { transform: 'translateY(100vh) scale(2)', opacity: 1 },
-          '100%': { transform: 'translateY(-10vh) scale(2)', opacity: 0.5 },
+        'initial-star': {
+          '0%': { visibility: 'hidden' },
+          '0.1%': { visibility: 'visible' },
+          '100%': { transform: 'translateY(-100vh)' },
         },
-        'bubble-up-20': {
-          '0%': { transform: 'translateY(100vh) scale(1.5)', opacity: 1 },
-          '100%': { transform: 'translateY(-10vh) scale(1.5)', opacity: 0.5 },
+        star: {
+          '100%': { transform: 'translateY(-200vh)' },
         },
-        'bubble-up-30': {
-          '0%': { transform: 'translateY(100vh)', opacity: 1 },
-          '100%': { transform: 'translateY(-10vh)', opacity: 0.5 },
-        },
-        'bubble-up-40': {
-          '0%': { transform: 'translateY(100vh) scale(0.8)', opacity: 1 },
-          '100%': { transform: 'translateY(-10vh) scale(0.8)', opacity: 0.5 },
-        },
-        'bubble-up-50': {
-          '0%': { transform: 'translateY(100vh) scale(0.2)', opacity: 1 },
-          '100%': { transform: 'translateY(-10vh) scale(0.2)', opacity: 0.5 },
-        },
-        'meteor-10': {
-          '0%': {
-            transform: 'translateY(-10vh) translateX(20vw) scale(2)',
-          },
+        'initial-meteor': {
+          '0%': { visibility: 'hidden' },
+          '0.1%': { visibility: 'visible' },
           '100%': {
-            transform: 'translateY(100vh) translateX(-160vw) scale(2)',
+            transform: 'translateY(100vh) translateX(-100vw)',
           },
         },
-        'meteor-20': {
-          '0%': {
-            transform: 'translateY(-10vh) translateX(20vw) scale(1.5)',
-          },
+        meteor: {
           '100%': {
-            transform: 'translateY(100vh) translateX(-160vw) scale(1.5)',
-          },
-        },
-        'meteor-30': {
-          '0%': {
-            transform: 'translateY(-10vh) translateX(20vw)',
-          },
-          '100%': {
-            transform: 'translateY(100vh) translateX(-160vw)',
-          },
-        },
-        'meteor-40': {
-          '0%': {
-            transform: 'translateY(-10vh) translateX(20vw) scale(.8)',
-          },
-          '100%': {
-            transform: 'translateY(100vh) translateX(-160vw) scale(.8)',
-          },
-        },
-        'meteor-50': {
-          '0%': {
-            transform: 'translateY(-10vh) translateX(20vw) scale(.5)',
-          },
-          '100%': {
-            transform: 'translateY(100vh) translateX(-160vw) scale(.5)',
-          },
-        },
-        'meteor-60': {
-          '0%': {
-            transform: 'translateY(-10vh) translateX(20vw) scale(.2)',
-          },
-          '100%': {
-            transform: 'translateY(100vh) translateX(-160vw) scale(.2)',
+            transform: 'translateY(200vh) translateX(-200vw)',
           },
         },
         'zoom-out': {
