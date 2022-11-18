@@ -1,7 +1,6 @@
 import { Head, Html, Main, NextScript } from 'next/document';
 
 import { basePath } from '../../next.config';
-import React from 'react';
 
 export default function MyDocument() {
   return (

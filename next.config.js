@@ -7,7 +7,9 @@ const nextConfig = {
   swcMinify: true,
   publicRuntimeConfig: {
     PROFILE_URL: process.env.PROFILE_URL,
-    WEB3_FORMS_ACCESS_KEY: process.env.WEB3_FORMS_ACCESS_KEY,
+    RECAPTCHA_SITE_KEY: process.env.RECAPTCHA_SITE_KEY,
+    PIPEDREAM_CONTACT_FORM_ENDPOINT:
+      process.env.PIPEDREAM_CONTACT_FORM_ENDPOINT,
   },
   basePath: process.env.BASE_PATH || '',
   images: {
