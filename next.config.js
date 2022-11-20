@@ -8,8 +8,8 @@ const nextConfig = {
   publicRuntimeConfig: {
     PROFILE_URL: process.env.PROFILE_URL,
     RECAPTCHA_SITE_KEY: process.env.RECAPTCHA_SITE_KEY,
-    PIPEDREAM_CONTACT_FORM_ENDPOINT:
-      process.env.PIPEDREAM_CONTACT_FORM_ENDPOINT,
+    CONTACT_FORM_ENDPOINT: process.env.CONTACT_FORM_ENDPOINT,
+    VISIT_TRACKER_ENDPOINT: process.env.VISIT_TRACKER_ENDPOINT,
   },
   basePath: process.env.BASE_PATH || '',
   images: {

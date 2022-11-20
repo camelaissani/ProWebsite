@@ -9,7 +9,7 @@ import Title from '../components/Title';
 import { useComponentMounted } from '../components/hooks';
 
 const {
-  publicRuntimeConfig: { RECAPTCHA_SITE_KEY, PIPEDREAM_CONTACT_FORM_ENDPOINT },
+  publicRuntimeConfig: { RECAPTCHA_SITE_KEY, CONTACT_FORM_ENDPOINT },
 } = getConfig();
 
 function Input({ id, type, title, required }) {
@@ -97,7 +97,7 @@ function ContactForm() {
         } else {
           setSending(true);
           const response = await axios.post(
-            PIPEDREAM_CONTACT_FORM_ENDPOINT,
+            CONTACT_FORM_ENDPOINT,
             { ...data },
             {
               'Content-Type': 'application/json',

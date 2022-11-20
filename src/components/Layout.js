@@ -10,6 +10,7 @@ import LeftRail from './LeftRail';
 import Portfolio from '../pages/sideprojects';
 import ProfileContext from './ProfileContext';
 import Resume from '../pages/experience';
+import { useVisitTracker } from './hooks';
 import Welcome from './Welcome';
 
 const {
@@ -35,6 +36,7 @@ export default function Layout({ children }) {
   const [ready, setReady] = useState(false);
   const [profile, setProfile] = useState();
   const [showWelcome, setShowWelcome] = useState(false);
+  useVisitTracker();
 
   useEffect(() => {
     const fetchProfile = async () => {
